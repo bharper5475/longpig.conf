@@ -29,9 +29,9 @@ This document lists every package, plugin, and CLI tool required by your `.zshrc
 
 ## 💻 Installation Commands
 
-### 🐧 Arch Linux
+## 🐧 Arch Linux
 sudo pacman -S --needed zsh fzf zoxide eza bat fd btop duf ripgrep neovim nodejs npm p7zip unrar unzip tar gzip bzip2
-# AUR plugins (use yay or paru)
+### AUR plugins (use yay or paru)
 yay -S zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting tree-sitter-cli
 
 Use npm *install -g tree-sitter-cli* after Node/npm install.
