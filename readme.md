@@ -1,6 +1,7 @@
-# 🧠 Zsh Environment Dependencies & Installation Guide
+#  Zsh Environment Dependencies & Installation Guide
 
 This document lists every package, plugin, and CLI tool required by your `.zshrc`, including their official GitHub pages and platform-specific install commands.
+Included are node and treesitter-cli which are reuired for nvim to work properly. After installation, run nvim and sync lazy plugins.
 
 ---
 
