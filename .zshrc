@@ -19,7 +19,7 @@ export LS_COLORS="di=33:ln=36:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 ### ─── zsh-autosuggestions (Inline Ghost Text) ───────────────────────
 # Load *before* zsh-autocomplete
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # Tweak autosuggestion appearance and logic
@@ -27,31 +27,11 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'   # grey ghost text
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1            # prevents binding conflicts with autocomplete
 
-
-### ─── zsh-autocomplete (Tab & Menu Completion) ───────────────────────
-# Load *after* autosuggestions
-if [ -f /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-fi
-
-# Optional tuning (makes typing smoother)
-zstyle ':autocomplete:*' min-delay 0.05
-zstyle ':autocomplete:async' max-wait 0.2
-zstyle ':autocomplete:tab:*' insert-unambiguous yes
-zstyle ':autocomplete:predict' false     # disable its own “ghost text” to avoid conflict
-
-
 ### ─── zsh-syntax-highlighting (Command Colors) ──────────────────────
 # Must come *last*
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
-
-
-### ─── fzf Integration (Search / History) ─────────────────────────────
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
-
 
 # ────────────────────────────────
 # ⚙️  Aliases & Replacements
@@ -64,7 +44,6 @@ alias find='fd'
 alias top='btop'
 alias du='duf'
 alias cd='z'
-alias grep='rg'
 alias vim='nvim'
 alias vi='nvim'
 alias update='sudo pacman -Syu'
@@ -109,9 +88,4 @@ setopt HIST_IGNORE_DUPS HIST_FIND_NO_DUPS SHARE_HISTORY HIST_VERIFY
 HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE=~/.zsh_history
-
-# ────────────────────────────────
-# 🧭  Startup Message
-# ────────────────────────────────
-echo "Hello from the pig."
-
+export PATH=$HOME/.config/rofi/scripts:$PATH
