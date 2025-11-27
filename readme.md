@@ -36,3 +36,4 @@ sudo pacman -S --needed zsh fzf zoxide eza bat fd btop duf ripgrep neovim nodejs
 yay -S zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting tree-sitter-cli
 
 Use npm *install -g tree-sitter-cli* after Node/npm install.
+ploop
